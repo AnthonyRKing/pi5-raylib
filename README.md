@@ -1,8 +1,6 @@
 # pi5-raylib
 ### My experience running Raylib's C code examples on Raspberry Pi 5 in desktop and native (DRM) modes, using OpenGL ES 3.1, and more
 
-See [this post on Odin's forum](https://forum.odin-lang.org/t/problems-with-raylib-linux-raspberry-pi-5/1386/23?u=anthonyrking), where I initially discussed this.
-
 I have managed to create a GUI Raylib window with a non-C language (Ada) on Raspberry Pi 5 Bookworm (Wayland), more of which later.
 
 ## Running Raylib Examples
@@ -134,7 +132,7 @@ Remember to `chmod +x brun.sh` before executing it from the example code's direc
 ```
 ./brun.sh shaders_basic_lighting
 ```
-![screenshot-20260712-182728 - Example Raylib PLATFORM_DESKTOP OpenGL ES3 on Raspberry Pi 5 Bookworm Output|690x330](upload://xt8uwJgUEjQYksdKGbEkz9aUilY.png)
+![screenshot-20260712-182728 - Example Raylib PLATFORM_DESKTOP OpenGL ES3 on Raspberry Pi 5 Bookworm Output|690x330](screenshot-20260712-182728%20-%20Example%20Raylib%20PLATFORM_DESKTOP%20OpenGL%20ES3%20on%20Raspberry%20Pi%205%20Bookworm%20Output.png)
 
 Esc to exit the demo.
 
@@ -144,3 +142,5 @@ When linking with my Ada program, it was a case of providing Raylib's source dir
 gnatmake -f hello.adb -largs -L ./raylib/src -l:libraylib.a -lGL -lm -lpthread -ldl -lrt -lX11 -lXrandr
 ```
 You may want to seek out some bindings for the particular language you want to use Raylib with. With Ada, I could manually create enough bindings to load and close a window, but that's as far as I got with it as yet.
+
+Originally discussed in [this post on Odin's forum](https://forum.odin-lang.org/t/problems-with-raylib-linux-raspberry-pi-5/1386/23?u=anthonyrking).
