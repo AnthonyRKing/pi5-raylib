@@ -1,5 +1,5 @@
 # pi5-raylib
-### My experience running Raylib's C code examples on Raspberry Pi 5 in desktop and native (DRM) modes, using OpenGL ES 3.1, and more
+#### My experience running Raylib's C code examples on Raspberry Pi 5 in desktop and native (DRM) modes, using OpenGL ES 3.1, and more
 
 I have managed to create a GUI Raylib window with a non-C language (Ada) on Raspberry Pi 5 Bookworm (Wayland), more of which later.
 
@@ -43,7 +43,7 @@ The [Raylib Pi instructions](https://github.com/raysan5/raylib/wiki/Working-on-R
     #define GLSL_VERSION            100
 #endif
 ```
-We don't have v3.3, but we can work with Pi 5's GL ES 3.0 capability, in any case. Actually the Pi 5 has GL ES 3.1 capability, but I think I'm just working with 3.0 so far. This `GLSL_VERSION` value is later used in the particular example code I analysed (`shaders_basic_lighting.c`), to select a directory for (shader) resources:
+We don't have v3.3, but we can work with Pi 5's GL ES 3.1. This `GLSL_VERSION` value is later used in the particular example code I analysed (`shaders_basic_lighting.c`), to select a directory for (shader) resources:
 ```
 // Load basic lighting shader
     Shader shader = LoadShader(TextFormat("resources/shaders/glsl%i/lighting.vs", GLSL_VERSION),
